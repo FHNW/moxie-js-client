@@ -1,7 +1,7 @@
 define([], function() {
     var MoxieConf = {
-        endpoint: 'http://new.m.ox.ac.uk/api',
-        titlePrefix: 'Mobile Oxford - ',
+        endpoint: 'http://localhost:5000/',
+        titlePrefix: 'FHNW Mobile - ',
         paths: {
             places_search: '/places/search',
             places_categories: '/places/types',
@@ -10,6 +10,7 @@ define([], function() {
             weather: '/weather/',
             rivers: '/rivers/',
             webcams: '/webcams/',
+            food: '/food/',
             courses_search: '/courses/search',
             courses_subjects: '/courses/subjects',
             courses_bookings: '/courses/bookings',

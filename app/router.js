@@ -1,5 +1,5 @@
-define(["app", "cordova.help", "backbone", "places/router", "today/views/IndexView", "today/collections/TodayItems", "courses/router", "library/router", "contacts/router", "news/router", "events/router", "feedback/router", "notifications/router", "favourites/views/FavouritesEditButtonView", "favourites/views/FavouritesView", "today/views/EditTodayButton", "today/views/SaveTodayButton", "today/views/EditTodayView", "security/router"],
-    function(app, cordova, Backbone, PlacesRouter, IndexView, TodayItems, CoursesRouter, LibraryRouter, ContactsRouter, NewsRouter, EventsRouter, FeedbackRouter, NotificationsRouter, FavouritesEditButtonView, FavouritesView, EditTodayButton, SaveTodayButton, EditTodayView, SecurityRouter){
+define(["app", "cordova.help", "backbone", "places/router", "today/views/IndexView", "today/collections/TodayItems", "courses/router", "library/router", "contacts/router", "news/router", "events/router", "feedback/router", "notifications/router", "favourites/views/FavouritesEditButtonView", "favourites/views/FavouritesView", "today/views/EditTodayButton", "today/views/SaveTodayButton", "today/views/EditTodayView", "security/router", "food/router"],
+    function(app, cordova, Backbone, PlacesRouter, IndexView, TodayItems, CoursesRouter, LibraryRouter, ContactsRouter, NewsRouter, EventsRouter, FeedbackRouter, NotificationsRouter, FavouritesEditButtonView, FavouritesView, EditTodayButton, SaveTodayButton, EditTodayView, SecurityRouter, FoodRouter){
     var MoxieRouter = Backbone.Router.extend({
         subrouters: {},
 
@@ -22,7 +22,8 @@ define(["app", "cordova.help", "backbone", "places/router", "today/views/IndexVi
             "events/*subroute": "events",
             "security/*subroute": "security",
             "feedback/*subroute": "feedback",
-            "notifications/*subroute": "notifications"
+            "notifications/*subroute": "notifications",
+            "food/*subroute": "food",
         },
 
         index: function() {
@@ -63,6 +64,11 @@ define(["app", "cordova.help", "backbone", "places/router", "today/views/IndexVi
         security: function(params) {
             if (!this.subrouters.Security) {
                 this.subrouters.Security = new SecurityRouter('security', {createTrailingSlashRoutes: true});
+            }
+        },
+        food: function(params) {
+            if (!this.subrouters.Food) {
+                this.subrouters.Food = new FoodRouter('food', {createTrailingSlashRoutes: true});
             }
         },
         feedback: function(params) {
