@@ -1,5 +1,5 @@
-define(["app", "moxie.conf", "underscore", "backbone", "food/views/MealsView", "food/collections/MealCollection", "backbone.subroute" ],
-    function(app, conf, _, Backbone, MealsView, MealCollection){
+define(["app", "moxie.conf", "backbone", "food/views/MealsView", "food/collections/MealCollection"],
+    function(app, conf, Backbone, MealsView, MealCollection){
 
         var FoodRouter = Backbone.SubRoute.extend({
             meals: new MealCollection(),

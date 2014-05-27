@@ -1,35 +1,9 @@
 define([], function() {
     var MoxieConf = {
-        endpoint: 'http://localhost:5000/',
+        endpoint: 'http://localhost:5000',
         titlePrefix: 'FHNW Mobile - ',
         paths: {
-            places_search: '/places/search',
-            places_categories: '/places/types',
-            places_id: '/places/',
-            dates: '/dates/today',
-            weather: '/weather/',
-            rivers: '/rivers/',
-            webcams: '/webcams/',
             food: '/food/',
-            courses_search: '/courses/search',
-            courses_subjects: '/courses/subjects',
-            courses_bookings: '/courses/bookings',
-            course_id: '/courses/course/',
-            presentation_id: '/courses/presentation/',
-            courses_auth_verify: '/courses/oauth/verify',
-            courses_auth_authorized: '/courses/oauth/authorized',
-            courses_auth_authorize: '/courses/oauth/authorize',
-            library_search: '/library/search',
-            library_item: '/library/item:',
-            contact_search: '/contact/search',
-            events_list: '/events/search?from=now',
-            events_id: '/events/',
-            park_and_rides: '/transport/park-and-rides',
-            feedback: '/feedback/',
-            notifications_list: '/notifications/',
-            notifications_id: '/notifications/',
-            push_notification_register_gcm: '/notifications/register/gcm',
-            push_notification_register_apns: '/notifications/register/apns'
         },
         urlFor: function(api_method) {
             return this.endpoint + this.paths[api_method];

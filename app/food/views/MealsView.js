@@ -18,13 +18,8 @@ define(['backbone', 'underscore', 'moxie.conf', 'food/models/MealModel', 'hbs!fo
                 todayMeals.push(new MealItemView({model: meal}));
             }
 
-            // this.collection.fetch( {success: function (collection, response) {
-//console.log('Collection models: ', this.models);
-            // collection.each(addMeal, this); }});
-            console.log('Collection models: ', this.collection.models);
-
-            _.each(this.collection.models, addMeal, this);
-            //debugger;
+            //_.each(this.collection.models, addMeal, this);
+            this.collection.each(addMeal, this);
 
             this.insertViews({
                 'ul#meals': todayMeals
