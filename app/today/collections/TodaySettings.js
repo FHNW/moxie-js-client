@@ -1,14 +1,11 @@
 define(["backbone", "underscore", "localstorage"],
     function(Backbone, _) {
         var defaultSettings = [
-            {name: 'OxfordDate', label: "Oxford term date", enabled: true},
-            {name: 'Weather', label: "Weather", enabled: true},
-            {name: 'RiverStatus', label: "River safety flags", enabled: true},
-            {name: 'Events', label: "Today's upcoming events", enabled: true},
+            {name: 'SwissDate', label: "Datum", enabled: true},
+            {name: 'Weather', label: "Wetter", enabled: true},
+            {name: 'Events', label: "Events", enabled: true},
             {name: 'NearbyRTI', label: "<strong>Nearby</strong> transport information", enabled: true},
             {name: 'FavRTI', label: "<strong>My favourite</strong> transport information", enabled: true},
-            {name: 'ParkAndRide', label: "Park &amp; Ride live capacity information", enabled: true},
-            {name: 'Webcam', label: "Webcam", enabled: true},
         ];
         var TodaySettings = Backbone.Collection.extend({
             initialize: function() {

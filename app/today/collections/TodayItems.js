@@ -1,4 +1,4 @@
-define(['underscore', 'core/collections/MoxieCollection', 'today/models/OxfordDate', 'today/models/Weather', 'today/models/Webcam', 'today/models/RiverStatus', 'today/models/NearbyRTI', 'today/models/Events', 'today/models/FavouriteRTI', 'today/models/ParkAndRide', 'today/models/Notifications'], function(_, MoxieCollection, OxfordDate, Weather, Webcam, RiverStatus, NearbyRTI, Events, FavRTI, ParkAndRide, Notifications) {
+define(['underscore', 'core/collections/MoxieCollection', 'today/models/SwissDate', 'today/models/Weather', 'today/models/NearbyRTI', 'today/models/Events', 'today/models/FavouriteRTI', 'today/models/Notifications'], function(_, MoxieCollection, SwissDate, Weather, NearbyRTI, Events, FavRTI, Notifications) {
     var TodayItems = MoxieCollection.extend({
         initialize: function(models, options) {
             this.favourites = options.favourites;
@@ -22,12 +22,9 @@ define(['underscore', 'core/collections/MoxieCollection', 'today/models/OxfordDa
 
                 var models = [];
                 models.push(new Notifications());   // not optional
-                if (this.settings.enabled('OxfordDate')) { models.push(new OxfordDate()); }
+                if (this.settings.enabled('SwissDate')) { models.push(new SwissDate()); }
                 if (this.settings.enabled('Weather')) { models.push(new Weather()); }
-                if (this.settings.enabled('RiverStatus')) { models.push(new RiverStatus()); }
-                if (this.settings.enabled('Webcam')) { models.push(new Webcam()); }
                 if (this.settings.enabled('Events')) { models.push(new Events()); }
-                if (this.settings.enabled('ParkAndRide')) { models.push(new ParkAndRide()); }
 
                 var favPOIDs = [];
                 if (this.settings.enabled('FavRTI')) {

@@ -3,9 +3,17 @@ define([], function() {
         endpoint: 'http://localhost:5000',
         titlePrefix: 'FHNW Mobile - ',
         paths: {
+            places_search: '/places/search',
+            places_categories: '/places/types',
+            places_id: '/places/',
             food: '/food/',
             news: '/news/',
-            events: '/events/',
+            dates: '/dates/today',
+            events_id: '/events/',
+            events_list: '/events/search?from=now',
+            weather: '/weather/',
+            notifications_list: '/notifications/',
+            notifications_id: '/notifications/',
         },
         urlFor: function(api_method) {
             return this.endpoint + this.paths[api_method];
