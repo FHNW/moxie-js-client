@@ -21,7 +21,7 @@ define([], function() {
         pathFor: function(api_method) {
             return this.paths[api_method];
         },
-        defaultLocation: {coords: {latitude: 51.752018, longitude: -1.257723}},
+        defaultLocation: {coords: {latitude: 47.482075, longitude: 8.211826}},
         mapbox: {key: 'mobileox.map-iihxb1dl'},
         map: {
             defaultZoom: 15,
@@ -43,7 +43,7 @@ define([], function() {
         },
         news: {
             feeds: [
-                    {"title": "University of Oxford - Media", "url": "http://www.ox.ac.uk/news_rss.rm", "slug": "offices-media"},
+                    {"title": "FHNW News", "url": "http://www.fhnw.ch/medien-und-oeffentlichkeit/news/@@rssnews", "slug": ""},
                 ],
             numberOfEntries: 10,
         },
