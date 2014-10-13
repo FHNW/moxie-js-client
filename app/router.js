@@ -1,5 +1,5 @@
-define(["app", "cordova.help", "backbone", "places/router", "today/views/IndexView", "today/collections/TodayItems", "courses/router", "library/router", "contacts/router", "news/router", "events/router", "feedback/router", "notifications/router", "favourites/views/FavouritesEditButtonView", "favourites/views/FavouritesView", "today/views/EditTodayButton", "today/views/SaveTodayButton", "today/views/EditTodayView", "security/router", "food/router"],
-    function(app, cordova, Backbone, PlacesRouter, IndexView, TodayItems, CoursesRouter, LibraryRouter, ContactsRouter, NewsRouter, EventsRouter, FeedbackRouter, NotificationsRouter, FavouritesEditButtonView, FavouritesView, EditTodayButton, SaveTodayButton, EditTodayView, SecurityRouter, FoodRouter){
+define(["app", "cordova.help", "backbone", "places/router", "today/views/IndexView", "today/collections/TodayItems", "courses/router", "library/router", "contacts/router", "news/router", "events/router", "feedback/router", "notifications/router", "favourites/views/FavouritesEditButtonView", "favourites/views/FavouritesView", "today/views/EditTodayButton", "today/views/SaveTodayButton", "today/views/EditTodayView", "security/router", "student-advice-service/views/StaticView", "learning-resources/views/StaticView", "food/router"],
+    function(app, cordova, Backbone, PlacesRouter, IndexView, TodayItems, CoursesRouter, LibraryRouter, ContactsRouter, NewsRouter, EventsRouter, FeedbackRouter, NotificationsRouter, FavouritesEditButtonView, FavouritesView, EditTodayButton, SaveTodayButton, EditTodayView, SecurityRouter, StudentAdviceView, LearningResourcesView, FoodRouter){
     var MoxieRouter = Backbone.Router.extend({
         subrouters: {},
 
@@ -24,6 +24,8 @@ define(["app", "cordova.help", "backbone", "places/router", "today/views/IndexVi
             "feedback/*subroute": "feedback",
             "notifications/*subroute": "notifications",
             "food/*subroute": "food",
+            "student-advice-service/": "studentAdvice",
+            "learning-resources/": "learningResources"
         },
 
         index: function() {
@@ -95,7 +97,15 @@ define(["app", "cordova.help", "backbone", "places/router", "today/views/IndexVi
             if (!this.subrouters.Library) {
                 this.subrouters.Library = new LibraryRouter('library', {createTrailingSlashRoutes: true});
             }
+        },
+        studentAdvice: function(params) {
+            app.renderView(new StudentAdviceView(), {menu: true});
+        },
+        learningResources: function(params) {
+            app.renderView(new LearningResourcesView(), {menu: true});
         }
+
+
     });
     return MoxieRouter;
 });
