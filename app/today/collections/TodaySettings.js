@@ -1,8 +1,6 @@
 define(["backbone", "underscore", "localstorage"],
     function(Backbone, _) {
         var defaultSettings = [
-            {name: 'SwissDate', label: "Datum", enabled: true},
-            {name: 'Weather', label: "Wetter", enabled: true},
             {name: 'Events', label: "Events", enabled: true},
             {name: 'NearbyRTI', label: "<strong>Nearby</strong> transport information", enabled: true},
             {name: 'FavRTI', label: "<strong>My favourite</strong> transport information", enabled: true},
