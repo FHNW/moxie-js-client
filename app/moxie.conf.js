@@ -9,10 +9,10 @@ define([], function() {
             places_id: '/places/',
             food: '/food/',
             news: '/news/',
-            dates: '/dates/today',
-            events_id: '/events/',
-            events_list: '/events/search?from=now',
-            weather: '/weather/',
+//            dates: '/dates/today',
+//            events_id: '/events/',
+//            events_list: '/events/search?from=now',
+//            weather: '/weather/',
             notifications_list: '/notifications/',
             notifications_id: '/notifications/',
         },
@@ -56,7 +56,7 @@ define([], function() {
         security: {
             feed: null,
         },
-        ga: {trackingID: "UA-40281467-3", period: 10, debug: true},
+ //       ga: {trackingID: "UA-40281467-3", period: 10, debug: true},
         pushNotifications: {
             ios: {
                 enabled: false
