@@ -1,4 +1,4 @@
-define(['underscore', 'core/collections/MoxieCollection', 'today/models/NearbyRTI', 'today/models/Events', 'today/models/FavouriteRTI', 'today/models/Notifications'], function(_, MoxieCollection, SwissDate, Weather, NearbyRTI, Events, FavRTI, Notifications) {
+define(['underscore', 'core/collections/MoxieCollection', 'today/models/NearbyRTI', 'today/models/Events', 'today/models/FavouriteRTI', 'today/models/Notifications'], function(_, MoxieCollection, NearbyRTI, Events, FavRTI, Notifications) {
     var TodayItems = MoxieCollection.extend({
         initialize: function(models, options) {
             this.favourites = options.favourites;

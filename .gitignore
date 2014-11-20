@@ -24,3 +24,5 @@ phonegap_build/
 # Ruby bundle (recommended in README.md)
 .bundle
 ruby
+
+index.html
