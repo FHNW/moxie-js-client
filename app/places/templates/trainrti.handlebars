@@ -5,29 +5,30 @@
 {{/if}}
 
 {{#if services}}
+  {{ services }}
 <img src="images/preloader.gif" id="rti-load" class="preloader" width="15" height="15">
 <table id="train-rti">
     <tbody>
-    {{#services}}
+    {{#each services}}
     <tr>
-        {{#if departure}}
+        {{#if this.departure}}
             {{#if delayed}}
             <td class="service-std delayed">{{ etd }}</td>
             {{else}}
-            <td class="service-std">{{ std }}</td>
+            <td class="service-std">{{ this.departure }}</td>
             {{/if}}
         {{/if}}
-        {{#if arrival}}
+        {{#if this.arrival}}
             {{#if delayed}}
             <td class="service-sta delayed">{{ eta }}</td>
             {{else}}
-            <td class="service-sta">{{ arrival }}</td>
+            <td class="service-sta">{{ this.arrival }}</td>
             {{/if}}
         {{/if}}
-        <td class="service-destination" colspan="2">{{ to }}</td>
-        <td class="service-platform">{{#if platform}}Plat. {{ platform }}{{/if}}</td>
+        <td class="service-destination" colspan="2">{{ this.to }}</td>
+        <td class="service-platform">{{#if this.platform}}Plat. {{ this.platform }}{{/if}}</td>
     </tr>
-    {{/services}}
+    {{/each}}
     </tbody>
 </table>
 {{#if lastUpdatedFormatted}}
