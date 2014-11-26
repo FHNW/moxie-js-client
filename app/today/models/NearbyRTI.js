@@ -32,7 +32,7 @@ define(["backbone", "underscore", "places/models/POIModel", "today/views/RTICard
         },
 
         url: function() {
-           return conf.urlFor('places_search') + '?type_exact=/transport/rail-station&type_exact=/transport/bus-stop&count=' + conf.today.nearbyRTI.fetchCount;
+           return conf.urlFor('places_search') + '?type_exact=/transport/rail-station&count=' + conf.today.nearbyRTI.fetchCount;
         },
 
         parse: function(data) {

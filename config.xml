@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="uk.ac.ox.it.mobileoxford" versionCode="201" version="0.2.1">
-    <name>Mobile Oxford</name>
+    <name>Mobile FHNW</name>
     <description>Your university and city on the move</description>
-    <author href="https://m.ox.ac.uk" email="mobileoxford@it.ox.ac.uk">Mobile Oxford team, IT Services, University of Oxford</author>
+    <author href="https://www.m.fhnw.ch" email="webmaster@fhnw.ch"></author>
 
     <!-- ios & android -->
     <preference name="DisallowOverscroll" value="true"/>
@@ -14,8 +14,7 @@
     <preference name="android-targetSdkVersion" value="14" /> 
     <preference name="SplashScreen" value="mobile_oxford_splash" />
 
-    <access origin="http://m.ox.ac.uk" />
-    <access origin="http://api.m.ox.ac.uk" />
+    <access origin="http://www.m.fhnw.ch" />
     <access origin="http://www.google.com" />
     <access origin="http://a.tiles.mapbox.com"  />
 </widget>

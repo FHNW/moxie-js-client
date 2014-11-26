@@ -10,21 +10,21 @@
     <tbody>
     {{#services}}
     <tr>
-        {{#if std}}
+        {{#if departure}}
             {{#if delayed}}
             <td class="service-std delayed">{{ etd }}</td>
             {{else}}
             <td class="service-std">{{ std }}</td>
             {{/if}}
         {{/if}}
-        {{#if sta}}
+        {{#if arrival}}
             {{#if delayed}}
             <td class="service-sta delayed">{{ eta }}</td>
             {{else}}
-            <td class="service-sta">{{ sta }}</td>
+            <td class="service-sta">{{ arrival }}</td>
             {{/if}}
         {{/if}}
-        <td class="service-destination" colspan="2">{{#destination.location}}{{ locationName }}{{/destination.location}}</td>
+        <td class="service-destination" colspan="2">{{ to }}</td>
         <td class="service-platform">{{#if platform}}Plat. {{ platform }}{{/if}}</td>
     </tr>
     {{/services}}
